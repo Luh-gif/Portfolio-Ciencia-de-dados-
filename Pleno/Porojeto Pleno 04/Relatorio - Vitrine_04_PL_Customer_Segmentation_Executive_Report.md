@@ -39,7 +39,7 @@ Clientes com renda mensal alta, mas baixo gasto médio na loja. Ocupam muito tem
 ## 3. Top Drivers de Segmentação (Explicação do Modelo)
 1.  **Monthly Income:** O divisor de águas para o potencial de consumo.
 2.  **Online Trust Score:** Diferencia o cliente maduro do cliente receoso.
-3.  ** स्मार्टफोन usage years:** Forte correlator de maturidade digital e propensão a compras via App.
+3.  **smartphone usage years:** Forte correlator de maturidade digital e propensão a compras via App.
 
 ---
 
