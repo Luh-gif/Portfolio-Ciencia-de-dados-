@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+ENV/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Data & Temp
+out.txt
+Dados projeto.md
+*.log
+.DS_Store
+
+# Models (opcional, mas bom manter se leves)
+# models/*.joblib
+
+# IDEs
+.vscode/
+.idea/

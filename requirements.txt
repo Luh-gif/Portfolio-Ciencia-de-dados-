@@ -1,0 +1,13 @@
+pandas
+numpy
+scikit-learn
+plotly
+seaborn
+ydata-profiling
+nbformat
+matplotlib
+shap
+joblib
+kaleido
+tqdm
+fsspec
