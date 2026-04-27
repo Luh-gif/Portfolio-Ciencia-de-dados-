@@ -9,10 +9,18 @@ Esta análise foca na identificação de padrões de fraude e impacto financeiro
 A fraude não ocorre de forma uniforme. Identificamos que **100% das fraudes** ocorrem em apenas dois tipos de transação: `TRANSFER` e `CASH_OUT`.
 *   **Impacto:** Perda total de aproximadamente **$12 Bilhões** (valor simulado na base).
 *   **Risco:** Transações do tipo `TRANSFER` têm uma taxa de fraude significativamente maior que a média da base.
+![Fraude por Canais](images/fraude_canais.png)
+![Market Share por Canal](images/market_share.png)
 
 ### B. O Padrão do "Esvaziamento de Conta"
 Consultas de saldo (`oldbalanceOrg` vs `newbalanceOrig`) mostram que a maioria das fraudes envolve o esvaziamento total da conta de origem.
 *   **Insight:** Transações onde o `amount` é exatamente igual ao `oldbalanceOrg` têm **85% de probabilidade** de serem fraudulentas em operações de `TRANSFER`.
+
+### C. Fluxo de Caixa e Sazonalidade
+A operação apresenta alto volume de circulação com um stress-test natural diário.
+*   **Pico de Uso:** Existe um pico severo às **18:00h**, momento crítico para manter os servidores de aprovação disponíveis.
+![Fluxo Financeiro Diário](images/fluxo_diario.png)
+![Pico de Sazonalidade](images/sazonalidade.png)
 
 ## 3. Consultas SQL de Alto Impacto (Destaques Técnicos)
 
