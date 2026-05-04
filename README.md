@@ -1,4 +1,10 @@
 # 🚀 Fábrica de Ciência de Dados: Portfólio de Consultoria Sênior
+
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-orange?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Google BigQuery](https://img.shields.io/badge/Google%20BigQuery-SQL%20%26%20ML-blue?style=for-the-badge&logo=google-cloud&logoColor=white)
+![Business Impact](https://img.shields.io/badge/ROI%20First-Business%20Strategy-success?style=for-the-badge)
+
 **Autor:** Lucas Nascimento Oliveira  
 **Postura:** Especialista em Negócios e Arquiteto de IA (Senior Strategy)
 
@@ -13,15 +19,17 @@ Clique nos links abaixo para explorar os projetos por nível de senioridade e co
 
 | Nível | Projeto | Foco Técnico | Documentação |
 | :--- | :--- | :--- | :--- |
-| **Sênior** | [Aviation Ops Risk](Senior/Pojeto%20senior%2006/) | Random Forest & SHAP (XAI) | [Case Study](Senior/Pojeto%20senior%2006/WALKTHROUGH.md) |
-| **Sênior** | [Hospital Risk Audit](Senior/Projeto%20Senior%2005/) | Anomaly Detection (Isolation Forest) | [Case Study](Senior/Projeto%20Senior%2005/WALKTHROUGH.md) |
-| **Pleno** | [Customer Segmentation](Pleno/Porojeto%20Pleno%2004/) | K-Means Clustering | [Case Study](Pleno/Porojeto%20Pleno%2004/WALKTHROUGH.md) |
-| **Pleno** | [Market Basket Analysis](Pleno/Projeto%20Pleno%2003/) | Association Rules & Bundling | [Case Study](Pleno/Projeto%20Pleno%2003/WALKTHROUGH.md) |
-| **Junior** | [Pricing Intelligence](Junior/Projeto%2002%20Junior/) | Big Data Viz & PCI Index | [Case Study](Junior/Projeto%2002%20Junior/WALKTHROUGH.md) |
-| **Junior** | [Geomarketing Expansion](Junior/Projeto%2001%20Junior/) | Geospatial Density Analytics | [Case Study](Junior/Projeto%2001%20Junior/WALKTHROUGH.md) |
+| **Sênior** | [Financial Fraud Analytics (BigQuery)](Senior/Projeto%20Senior%2008%20-%20Fraude%20BigQuery/) | Cloud MPP (BigQuery) & Anomaly Detection | [Case Study](Senior/Projeto%20Senior%2008%20-%20Fraude%20BigQuery/README.md) |
+| **Sênior** | [BigQuery LTV Prediction](Senior/Projeto%20Senior%2007/) | BQML & SQL Avançado (Cohort/RFV) | [Case Study](Senior/Projeto%20Senior%2007/walkthrough.md) |
+| **Sênior** | [Aviation Ops Risk](Senior/Projeto%20Senior%2006/) | Random Forest & SHAP (XAI) | [Case Study](Senior/Projeto%20Senior%2006/walkthrough.md) |
+| **Sênior** | [Hospital Risk Audit](Senior/Projeto%20Senior%2005/) | Anomaly Detection (Isolation Forest) | [Case Study](Senior/Projeto%20Senior%2005/walkthrough.md) |
+| **Pleno** | [Customer Segmentation](Pleno/Projeto%20Pleno%2004/) | K-Means Clustering | [Case Study](Pleno/Projeto%20Pleno%2004/walkthrough.md) |
+| **Pleno** | [Market Basket Analysis](Pleno/Projeto%20Pleno%2003/) | Association Rules & Bundling | [Case Study](Pleno/Projeto%20Pleno%2003/walkthrough.md) |
+| **Junior** | [Pricing Intelligence](Junior/Projeto%2002%20Junior/) | Big Data Viz & PCI Index | [Case Study](Junior/Projeto%2002%20Junior/walkthrough.md) |
+| **Junior** | [Geomarketing Expansion](Junior/Projeto%2001%20Junior/) | Geospatial Density Analytics | [Case Study](Junior/Projeto%2001%20Junior/walkthrough.md) |
 
 > [!TIP]
-> **Acesso Mestre**: Para uma visão consolidada de toda a jornada técnica, consulte o [WALKTHROUGH_MESTRE.md](WALKTHROUGH_MESTRE.md).
+> **Acesso Mestre**: Para uma visão consolidada de toda a jornada técnica, consulte o [walkthrough_mestre.md](walkthrough_mestre.md).
 
 ---
 
@@ -37,7 +45,7 @@ O projeto segue uma estrutura profissional voltada para escalabilidade e produç
 ## 🛠️ Como Executar o Pipeline
 1. Clone o repositório.
 2. Crie um ambiente virtual: `python -m venv .venv`.
-3. Instale as dependências: `pip install -r requirements.txt`.
+3. Instale as dependências com versões fixadas: `pip install -r requirements.txt`.
 4. Os datasets processados já estão disponíveis em `/data/processed/`.
 
 ---
