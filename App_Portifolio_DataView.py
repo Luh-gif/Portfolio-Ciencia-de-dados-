@@ -23,13 +23,26 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
+import numpy as np
+
 # --- CARREGAMENTO DE DADOS ---
 PATH_SHOPPING = "data/processed/consumer_shopping_trends_limpo.csv"
+PATH_RAW_SHOPPING = "data/raw/consumer_shopping_trends.csv"
 PATH_SCORED = "data/processed/pia_2026_scored.csv"
 
 @st.cache_data
 def load_data():
     df_shop = pd.read_csv(PATH_SHOPPING) if os.path.exists(PATH_SHOPPING) else pd.DataFrame()
+    df_raw = pd.read_csv(PATH_RAW_SHOPPING) if os.path.exists(PATH_RAW_SHOPPING) else pd.DataFrame()
+    
+    # Desnormalizar colunas numéricas de df_shop utilizando médias e desvios do dataset bruto (raw)
+    if not df_shop.empty and not df_raw.empty:
+        for col in df_shop.select_dtypes(include=[np.number]).columns:
+            if col in df_raw.columns:
+                mean_val = df_raw[col].mean()
+                std_val = df_raw[col].std()
+                df_shop[col] = (df_shop[col] * std_val) + mean_val
+                
     df_scored = pd.read_csv(PATH_SCORED) if os.path.exists(PATH_SCORED) else pd.DataFrame()
     return df_shop, df_scored
 
@@ -103,10 +116,27 @@ elif "Pleno" in level:
         st.plotly_chart(fig_funnel, use_container_width=True)
         st.markdown('<div class="chart-desc"><b>O que este gráfico faz?</b> Hierarquiza as preferências de compra, permitindo ver visualmente a diferença de escala entre os canais de venda.</div>', unsafe_allow_html=True)
 
-    st.subheader("Relação Idade vs Horas de Internet")
-    fig_scatter = px.scatter(df_shop, x='age', y='daily_internet_hours', color='shopping_preference', opacity=0.5, color_discrete_sequence=px.colors.qualitative.Prism)
-    st.plotly_chart(fig_scatter, use_container_width=True)
-    st.markdown('<div class="chart-desc"><b>O que este gráfico faz?</b> Explora se clientes mais jovens passam mais tempo na internet e se isso influencia a preferência por compras online. Cada ponto é um cliente.</div>', unsafe_allow_html=True)
+    st.subheader("📈 Tendência: Horas de Internet vs Canal de Venda por Idade")
+    # Agrupar dados por idade (arredondada) e preferência de compra para calcular a média de horas de internet
+    df_shop_copy = df_shop.copy()
+    df_shop_copy['age'] = df_shop_copy['age'].round().astype(int)
+    df_trend = df_shop_copy.groupby(['age', 'shopping_preference'])['daily_internet_hours'].mean().reset_index()
+    
+    fig_line = px.line(
+        df_trend, 
+        x='age', 
+        y='daily_internet_hours', 
+        color='shopping_preference',
+        color_discrete_sequence=['#004AAD', '#00A3FF', '#CFD8DC'],
+        labels={
+            'age': 'Idade (Anos)', 
+            'daily_internet_hours': 'Média de Horas Diárias de Internet', 
+            'shopping_preference': 'Preferência de Canal'
+        }
+    )
+    fig_line.update_layout(template='plotly_white')
+    st.plotly_chart(fig_line, use_container_width=True)
+    st.markdown('<div class="chart-desc"><b>O que este gráfico faz?</b> Cruza a idade do cliente com a média de tempo diário gasto na internet. Revela a clara tendência de que clientes mais jovens acessam mais a internet e preferem canais digitais (Online/Hybrid), enquanto clientes mais velhos passam menos tempo navegando e priorizam lojas físicas (Store).</div>', unsafe_allow_html=True)
 
 # =================================================================
 # 🔴 VISÃO SÊNIOR (ESTRATÉGICO) - ROI e Risco Financeiro
