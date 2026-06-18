@@ -1,29 +1,67 @@
-# Guia Mestre da Fábrica de Ciência de Dados
+# 🏗️ Manual de Arquitetura & Governança: Fábrica de Ciência de Dados
 
-Este documento consolida a jornada técnica e estratégica de todos os projetos desenvolvidos na Fábrica de Ciência de Dados.
-
-> [!NOTE]
-> *Este documento foi atualizado para refletir os últimos projetos de impacto (Sênior 07 e 08).*
-
-### Resumo Executivo
-- Total de Projetos: 8
-- Níveis: Junior, Pleno, Sênior
-- Foco: ROI, Redução de OPEX, Cloud, e Machine Learning Avançado (XAI)
+Este documento consolida a visão arquitetural, as decisões tecnológicas e a metodologia de governança aplicada ao ecossistema da **Fábrica de Ciência de Dados**. Ele serve como guia de engenharia e referência técnica para produtização de modelos sob uma perspectiva de alto ROI de negócios.
 
 ---
 
-## 📍 Tabela Completa de Projetos
+## 📊 1. Sumário Executivo: Impacto Financeiro Consolidado (R$ 7,2M+)
 
-| Nível | Projeto | Foco Técnico | Metodologia & ROI de Negócio | Documentação |
-| :--- | :--- | :--- | :--- | :--- |
-| **Sênior** | [Financial Fraud Analytics](Senior/Projeto%20Senior%2008%20-%20Fraude%20BigQuery/) | Cloud MPP (BigQuery) & SQL | Otimização de queries distribuídas para redução de custos (OPEX) em Data Lake corporativo. | [Case Study](Senior/Projeto%20Senior%2008%20-%20Fraude%20BigQuery/README.md) |
-| **Sênior** | [BigQuery LTV Prediction](Senior/Projeto%20Senior%2007/) | BQML & SQL Avançado (Cohort/RFV) | Modelagem de regressão linear nativa em Data Warehouse para previsão de receita futura por cohort de clientes. | [Case Study](Senior/Projeto%20Senior%2007/walkthrough.md) |
-| **Sênior** | [Aviation Ops Risk](Senior/Projeto%20Senior%2006/) | Random Forest & SHAP (XAI) | Mitigação de **US$ 1,5M+** em riscos operacionais de malha aérea com IA explicável. | [Case Study](Senior/Projeto%20Senior%2006/walkthrough.md) |
-| **Sênior** | [Hospital Risk Audit](Senior/Projeto%20Senior%2005/) | Isolation Forest (Outliers) | Identificação automatizada de **R$ 2,4M** em anomalias de faturamento de exames e contas médicas. | [Case Study](Senior/Projeto%20Senior%2005/walkthrough.md) |
-| **Pleno** | [Customer Segmentation](Pleno/Projeto%20Pleno%2004/) | K-Means Clustering | Segmentação comportamental RFV para otimização de custos de aquisição e retenção em campanhas de marketing. | [Case Study](Pleno/Projeto%20Pleno%2004/walkthrough.md) |
-| **Pleno** | [Market Basket Analysis](Pleno/Projeto%20Pleno%2003/) | Association Rules & Bundling | Algoritmo Apriori aplicado em transações para otimização de ticket médio através de combos (product bundling). | [Case Study](Pleno/Projeto%20Pleno%2003/walkthrough.md) |
-| **Junior** | [Pricing Intelligence](Junior/Projeto%2002%20Junior/) | Big Data Viz & PCI Index | Cálculo do Price Competitiveness Index (PCI) sobre 370k+ registros diários de preços concorrenciais. | [Case Study](Junior/Projeto%2002%20Junior/walkthrough.md) |
-| **Junior** | [Geomarketing Expansion](Junior/Projeto%2001%20Junior/) | Geospatial Density Analytics | Mapeamento de densidade de infraestrutura de carregamento elétrico no UK para otimização de CAPEX de expansão. | [Case Study](Junior/Projeto%2001%20Junior/walkthrough.md) |
+Todos os pipelines e modelos desenvolvidos nesta fábrica possuem foco exclusivo em geração de EBITDA, redução de despesas operacionais (OPEX) ou mitigação de riscos críticos de caixa. O impacto de **R$ 7,2M+** em oportunidades mapeadas é distribuído sob duas grandes frentes:
+
+```mermaid
+graph TD
+    A[Fábrica de Dados: Impacto Consolidado R$ 7.2M+] --> B[Mitigação de Riscos de Logística R$ 4.8M]
+    A --> C[Blindagem de Faturamento na Saúde R$ 2.4M]
+    B --> B1[Previsão de Atrasos com Random Forest]
+    B --> B2[Explicabilidade das Causas via SHAP]
+    C --> C1[Detecção de Glosas/Duplicidades por IA]
+    C --> C2[Auditoria Automatizada via Isolation Forest]
+```
+
+1. **Eficiência Logística (R$ 4,8M/ano protegido):** Modelo preditivo de classificação baseado em *Random Forest* que detecta a probabilidade de falhas e atrasos críticos na malha de transportes (*Aviation Ops Risk*), permitindo reacomodação preditiva antes que multas e quebras de SLA ocorram.
+2. **Prevenção de Glosas e Perdas Médicas (R$ 2,4M/ano recuperado):** Algoritmo não-supervisionado *Isolation Forest* (*Hospital Risk Audit*) aplicado ao faturamento hospitalar, identificando lançamentos duplicados, inconsistências e padrões anômalos de consumo de exames em segundos, otimizando o OPEX da auditoria manual.
 
 ---
-*Fábrica Sênior de Analytics - Foco em Resultados de Negócio*
+
+## 🏗️ 2. Padrão Arquitetural de "Fábrica" (Modularidade)
+
+A arquitetura do projeto foi estruturada para ser parametrizada e modular, visando a escalabilidade do modelo PJ (permitindo reaproveitar até 70% da lógica para novos clientes):
+
+*   **`/data` (Ingestão & Camadas):** Separação estrita entre `raw/` (dados brutos protegidos e imutáveis) e `processed/` (dados higienizados e scorados prontos para visualização).
+*   **`/src` (Core Engine):** Toda a lógica operacional é empacotada em módulos Python reutilizáveis, evitando *spaghetti code* em notebooks.
+*   **`/tests` (Qualidade de Software):** Implementação de testes unitários automatizados para garantir a estabilidade do pipeline em produção.
+*   **`/.github` (CI/CD):** Pipeline de Integração Contínua configurado para rodar a esteira de testes a cada alteração de código.
+
+---
+
+## ⚡ 3. Stack Tecnológico & Decisões Arquiteturais (O "Porquê")
+
+### A. Processamento Local vs. Nuvem (Cloud MPP)
+*   **Decisão:** Em bases menores (varejo e consumo), o processamento ocorre via **Pandas** local. Para dados volumosos e transações financeiras (*Financial Fraud Analytics*), a computação ocorre de forma distribuída diretamente no **Google BigQuery** usando SQL avançado (CTEs e partições).
+*   **Justificativa:** Redução drástica de latência de rede e eliminação de custos fixos com servidores ligados 24/7 (Serverless Data Warehouse).
+
+### B. Machine Learning Nativo em Data Warehouse (BQML)
+*   **Decisão:** Previsão de Lifetime Value (LTV) estruturada diretamente em **BigQuery ML** utilizando regressão linear.
+*   **Justificativa:** Dispensa a necessidade de exportar terabytes de dados históricos de compras para ambientes locais Python. O pipeline de treinamento e inferência roda inteiramente em nuvem no próprio banco.
+
+### C. Explainable AI (XAI) como Requisito de Negócio
+*   **Decisão:** Substituição da abordagem "Caixa Preta" de algoritmos complexos pela aplicação do **SHAP (SHapley Additive exPlanations)** no modelo de classificação de riscos.
+*   **Justificativa:** Em decisões executivas de alta criticidade (ex: alteração de rotas logísticas), a diretoria precisa de auditoria clara. O SHAP traduz as variáveis em drivers quantitativos explicáveis (ex: impacto relativo da taxa de ocupação da aeronave no atraso geral).
+
+---
+
+## 🧪 4. MLOps e Garantia de Qualidade (Q&A)
+
+Para garantir a robustez de nível sênior, implementamos um pipeline de **Integração Contínua (CI/CD)**:
+
+1. **Testes Unitários (`pytest`):** Criamos a pasta `/tests/` contendo scripts que validam a consistência dos pipelines operacionais (como o de tráfego do site em [test_pipeline_site.py](file:///c:/Users/luizn/OneDrive/%C3%81rea%20de%20Trabalho/Projetos%20Ciencia%20de%20dados/tests/test_pipeline_site.py)). Ele simula a entrada de dados brutos e valida se a saída processada e as colunas de cenários financeiros foram geradas com sucesso.
+2. **GitHub Actions (`ci.yml`):** A cada `git push` ou `Pull Request` enviado para a branch `main`, uma máquina virtual Linux é provisionada na nuvem do GitHub, instala as dependências listadas no `requirements.txt` e executa a suíte de testes do repositório.
+
+---
+
+## 🎨 5. Governança de Data Viz (Visualização Corporativa)
+
+Os painéis desenvolvidos na fábrica (seja em Streamlit Cloud ou Power BI) seguem regras estritas de design corporativo:
+*   **Eliminação de Chart Junk:** Sem grades desnecessárias, efeitos 3D ou excesso de cores.
+*   **Visualização Estruturada em Níveis:** Divisão clara entre dashboards *Operacionais* (Junior), *Táticos* (Pleno) e *Estratégicos* (Sênior) para atender a diferentes personas na corporação.
+*   **Cores de Contraste:** Uso de cores neutras (tons de cinza/azul corporativo) para contexto e a cor primária (neon) apenas no ponto de destaque do insight de negócios.
