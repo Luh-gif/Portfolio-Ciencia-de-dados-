@@ -16,7 +16,7 @@
 >   * **R$ 4,8M (US$ 960k):** Receita anual protegida em voos comerciais de alta criticidade através do modelo de mitigação preditiva de atrasos severos (*Aviation Ops Risk*).
 >   * **R$ 2,4M:** Economia estimada de glosas de faturamento e erros de lançamento médico identificados por IA de detecção de anomalias (*Hospital Risk Audit*).
 
-🖥️ **[Acesse a Demonstração ao Vivo do Web App (Streamlit Cloud)](https://share.streamlit.io/)** *(Insira a URL do Deploy Aqui)*
+🖥️ **[Acesse a Demonstração ao Vivo do Web App (Streamlit Cloud)](https://share.streamlit.io/)**
 
 ---
 
