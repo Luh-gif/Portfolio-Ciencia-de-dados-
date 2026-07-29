@@ -1,4 +1,4 @@
-# 🚀 Fábrica de Ciência de Dados: Portfólio de Consultoria Sênior
+Ciêntista de Dados - Portfólio 
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)
 ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-orange?style=for-the-badge&logo=scikit-learn&logoColor=white)
@@ -6,7 +6,6 @@
 ![Business Impact](https://img.shields.io/badge/ROI%20First-Business%20Strategy-success?style=for-the-badge)
 
 **Autor:** Lucas Nascimento Oliveira  
-**Postura:** Especialista em Negócios e Arquiteto de IA (Senior Strategy)
 
 > [!IMPORTANT]
 > **Projeção de Impacto Consolidado:** 
