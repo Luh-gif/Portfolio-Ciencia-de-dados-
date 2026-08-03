@@ -1,4 +1,4 @@
-# 🚀 Portfólio de Ciência de Dados: Projetos Técnicos
+#  Portfólio de Ciência de Dados: Projetos Técnicos
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)
 ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-orange?style=for-the-badge&logo=scikit-learn&logoColor=white)
@@ -15,7 +15,6 @@
 >   * **R$ 4,8M (US$ 960k):** Receita anual projetada e protegida sob cenário simulado de malha aérea através do modelo de mitigação preditiva de atrasos severos (*Aviation Ops Risk*).
 >   * **R$ 2,4M:** Economia estimada em simulação de glosas de faturamento e erros de lançamento médico identificados por IA de detecção de anomalias (*Hospital Risk Audit*).
 
-🖥️ **Demonstração do Web App (Streamlit):** O painel de visualização está configurado para execução em ambiente local. Siga os passos na seção **Como Executar o Pipeline** para testar as telas e interagir com o dashboard.
 
 ---
 
