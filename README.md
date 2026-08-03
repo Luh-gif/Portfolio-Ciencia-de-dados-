@@ -1,22 +1,21 @@
-# 🚀 Fábrica de Ciência de Dados: Portfólio de Consultoria Sênior
+# 🚀 Fábrica de Ciência de Dados: Portfólio de Projetos Técnicos
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)
 ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-orange?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![Google BigQuery](https://img.shields.io/badge/Google%20BigQuery-SQL%20%26%20ML-blue?style=for-the-badge&logo=google-cloud&logoColor=white)
-![Business Impact](https://img.shields.io/badge/ROI%20First-Business%20Strategy-success?style=for-the-badge)
 
 **Autor:** Lucas Nascimento Oliveira  
-**Postura:** Especialista em Negócios e Arquiteto de IA (Senior Strategy)
+**Postura:** Cientista de Dados Sênior / Engenheiro de Machine Learning
 
 > [!IMPORTANT]
-> **Projeção de Impacto Consolidado:** 
-> Este portfólio demonstra a capacidade de transformar bases de dados complexas em **R$ 7,2M+** de valor identificado e protegido, reduzindo o OPEX em até **15%** e garantindo acurácia preditiva de **82%** em decisões críticas.
+> **Impacto Estimado em Cenário Simulado:** 
+> Este portfólio demonstra a aplicação prática de técnicas de ciência de dados voltadas à otimização de processos de negócios e mitigação de riscos, estimadas em até **R$ 7,2M+** de valor projetado sob cenários simulados (estudos de caso), com potencial de redução de OPEX de até **15%** e acurácia preditiva simulada de **82%** em decisões críticas.
 > 
-> * **Metodologia de Impacto (R$ 7,2M+):**
->   * **R$ 4,8M (US$ 960k):** Receita anual protegida em voos comerciais de alta criticidade através do modelo de mitigação preditiva de atrasos severos (*Aviation Ops Risk*).
->   * **R$ 2,4M:** Economia estimada de glosas de faturamento e erros de lançamento médico identificados por IA de detecção de anomalias (*Hospital Risk Audit*).
+> * **Metodologia de Impacto (R$ 7,2M+ - Estimativa em Cenário Simulado):**
+>   * **R$ 4,8M (US$ 960k):** Receita anual projetada e protegida sob cenário simulado de malha aérea através do modelo de mitigação preditiva de atrasos severos (*Aviation Ops Risk*).
+>   * **R$ 2,4M:** Economia estimada em simulação de glosas de faturamento e erros de lançamento médico identificados por IA de detecção de anomalias (*Hospital Risk Audit*).
 
-🖥️ **[Acesse a Demonstração ao Vivo do Web App (Streamlit Cloud)](https://share.streamlit.io/)** *(Insira a URL do Deploy Aqui)*
+🖥️ **Demonstração do Web App (Streamlit):** O painel de visualização está configurado para execução em ambiente local. Siga os passos na seção **Como Executar o Pipeline** para testar as telas e interagir com o dashboard.
 
 ---
 

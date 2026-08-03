@@ -4,22 +4,22 @@ Este documento consolida a visão arquitetural, as decisões tecnológicas e a m
 
 ---
 
-## 📊 1. Sumário Executivo: Impacto Financeiro Consolidado (R$ 7,2M+)
+## 📊 1. Sumário Executivo: Impacto Financeiro Projetado (R$ 7,2M+ em Cenários Simulados)
 
-Todos os pipelines e modelos desenvolvidos nesta fábrica possuem foco exclusivo em geração de EBITDA, redução de despesas operacionais (OPEX) ou mitigação de riscos críticos de caixa. O impacto de **R$ 7,2M+** em oportunidades mapeadas é distribuído sob duas grandes frentes:
+Todos os pipelines e modelos desenvolvidos nesta fábrica possuem foco na otimização de métricas financeiras (geração de EBITDA, redução de despesas operacionais - OPEX - ou mitigação de riscos críticos de caixa). O impacto estimado de **R$ 7,2M+** em oportunidades mapeadas refere-se a projeções baseadas em cenários simulados de negócios (estudos de caso) e está distribuído sob duas grandes frentes:
 
 ```mermaid
 graph TD
-    A[Fábrica de Dados: Impacto Consolidado R$ 7.2M+] --> B[Mitigação de Riscos de Logística R$ 4.8M]
-    A --> C[Blindagem de Faturamento na Saúde R$ 2.4M]
+    A["Fábrica de Dados: Impacto Projetado R$ 7.2M+ (Cenário Simulado)"] --> B["Mitigação Estimada de Riscos Logísticos R$ 4.8M"]
+    A --> C["Blindagem Estimada de Faturamento na Saúde R$ 2.4M"]
     B --> B1[Previsão de Atrasos com Random Forest]
     B --> B2[Explicabilidade das Causas via SHAP]
     C --> C1[Detecção de Glosas/Duplicidades por IA]
     C --> C2[Auditoria Automatizada via Isolation Forest]
 ```
 
-1. **Eficiência Logística (R$ 4,8M/ano protegido):** Modelo preditivo de classificação baseado em *Random Forest* que detecta a probabilidade de falhas e atrasos críticos na malha de transportes (*Aviation Ops Risk*), permitindo reacomodação preditiva antes que multas e quebras de SLA ocorram.
-2. **Prevenção de Glosas e Perdas Médicas (R$ 2,4M/ano recuperado):** Algoritmo não-supervisionado *Isolation Forest* (*Hospital Risk Audit*) aplicado ao faturamento hospitalar, identificando lançamentos duplicados, inconsistências e padrões anômalos de consumo de exames em segundos, otimizando o OPEX da auditoria manual.
+1. **Eficiência Logística (R$ 4,8M/ano de impacto simulado protegido):** Modelo preditivo de classificação baseado em *Random Forest* que detecta a probabilidade de falhas e atrasos críticos na malha de transportes (*Aviation Ops Risk*), permitindo simular a reacomodação preditiva antes que multas e quebras de SLA ocorram (prospecção teórica de economia anual).
+2. **Prevenção de Glosas e Perdas Médicas (R$ 2,4M/ano de impacto simulado recuperado):** Algoritmo não-supervisionado *Isolation Forest* (*Hospital Risk Audit*) aplicado ao faturamento hospitalar, identificando lançamentos duplicados, inconsistências e padrões anômalos de consumo de exames, otimizando o OPEX projetado da auditoria manual.
 
 ---
 
