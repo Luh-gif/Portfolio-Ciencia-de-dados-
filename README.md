@@ -1,11 +1,11 @@
-# 🚀 Fábrica de Ciência de Dados: Portfólio de Projetos Técnicos
+# 🚀 Portfólio de Ciência de Dados: Projetos Técnicos
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)
 ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-orange?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![Google BigQuery](https://img.shields.io/badge/Google%20BigQuery-SQL%20%26%20ML-blue?style=for-the-badge&logo=google-cloud&logoColor=white)
 
 **Autor:** Lucas Nascimento Oliveira  
-**Postura:** Cientista de Dados Sênior / Engenheiro de Machine Learning
+**Postura:** Cientista de Dados
 
 > [!IMPORTANT]
 > **Impacto Estimado em Cenário Simulado:** 
@@ -38,11 +38,11 @@ Clique nos links abaixo para explorar os projetos por nível de senioridade, com
 
 ---
 
-## 🏗️ Arquitetura de "Fábrica" (Modularidade)
+## 🏗️ Arquitetura de Projetos (Modularidade)
 O projeto segue uma estrutura profissional voltada para escalabilidade e produção:
 - `/data/processed`: Bases limpas e scoradas prontas para consumo.
-- `/src/ml`: Motor de Machine Learning Sênior (`model_engine.py`).
-- `/src/reporting`: Fábrica de visualizações corporativas (`viz_factory.py`).
+- `/src/ml`: Motor de Machine Learning (`model_engine.py`).
+- `/src/reporting`: Módulo de visualizações corporativas (`viz_factory.py`).
 - `/models`: Modelos treinados e persistidos em `.joblib`.
 
 ---
@@ -54,5 +54,5 @@ O projeto segue uma estrutura profissional voltada para escalabilidade e produç
 4. Os datasets processados já estão disponíveis em `/data/processed/`.
 
 ---
-**AntiGravity - Lucas Nascimento Oliveira**  
-*Ciência de dados sênior: prevenindo crises, maximizando o EBITDA.*
+**Lucas Nascimento Oliveira**  
+*Cientista de Dados: gerando inteligência e valor por meio de dados.*

@@ -1,6 +1,6 @@
-# 🏗️ Manual de Arquitetura & Governança: Fábrica de Ciência de Dados
+# 🏗️ Manual de Arquitetura & Governança: Projetos de Ciência de Dados
 
-Este documento consolida a visão arquitetural, as decisões tecnológicas e a metodologia de governança aplicada ao ecossistema da **Fábrica de Ciência de Dados**. Ele serve como guia de engenharia e referência técnica para produtização de modelos sob uma perspectiva de alto ROI de negócios.
+Este documento consolida a visão arquitetural, as decisões tecnológicas e a metodologia de governança aplicada ao ecossistema de **Ciência de Dados**. Ele serve como guia de engenharia e referência técnica para produtização de modelos sob uma perspectiva de alto ROI de negócios.
 
 ---
 
@@ -10,7 +10,7 @@ Todos os pipelines e modelos desenvolvidos nesta fábrica possuem foco na otimiz
 
 ```mermaid
 graph TD
-    A["Fábrica de Dados: Impacto Projetado R$ 7.2M+ (Cenário Simulado)"] --> B["Mitigação Estimada de Riscos Logísticos R$ 4.8M"]
+    A["Ecossistema de Dados: Impacto Projetado R$ 7.2M+ (Cenário Simulado)"] --> B["Mitigação Estimada de Riscos Logísticos R$ 4.8M"]
     A --> C["Blindagem Estimada de Faturamento na Saúde R$ 2.4M"]
     B --> B1[Previsão de Atrasos com Random Forest]
     B --> B2[Explicabilidade das Causas via SHAP]
@@ -23,7 +23,7 @@ graph TD
 
 ---
 
-## 🏗️ 2. Padrão Arquitetural de "Fábrica" (Modularidade)
+## 🏗️ 2. Padrão Arquitetural de Projetos (Modularidade)
 
 A arquitetura do projeto foi estruturada para ser parametrizada e modular, visando a escalabilidade do modelo PJ (permitindo reaproveitar até 70% da lógica para novos clientes):
 
@@ -52,7 +52,7 @@ A arquitetura do projeto foi estruturada para ser parametrizada e modular, visan
 
 ## 🧪 4. MLOps e Garantia de Qualidade (Q&A)
 
-Para garantir a robustez de nível sênior, implementamos um pipeline de **Integração Contínua (CI/CD)**:
+Para garantir a robustez do código, implementamos um pipeline de **Integração Contínua (CI/CD)**:
 
 1. **Testes Unitários (`pytest`):** Criamos a pasta `/tests/` contendo scripts que validam a consistência dos pipelines operacionais (como o de tráfego do site em [test_pipeline_site.py](file:///c:/Users/luizn/OneDrive/%C3%81rea%20de%20Trabalho/Projetos%20Ciencia%20de%20dados/tests/test_pipeline_site.py)). Ele simula a entrada de dados brutos e valida se a saída processada e as colunas de cenários financeiros foram geradas com sucesso.
 2. **GitHub Actions (`ci.yml`):** A cada `git push` ou `Pull Request` enviado para a branch `main`, uma máquina virtual Linux é provisionada na nuvem do GitHub, instala as dependências listadas no `requirements.txt` e executa a suíte de testes do repositório.
@@ -61,7 +61,7 @@ Para garantir a robustez de nível sênior, implementamos um pipeline de **Integ
 
 ## 🎨 5. Governança de Data Viz (Visualização Corporativa)
 
-Os painéis desenvolvidos na fábrica (seja em Streamlit Cloud ou Power BI) seguem regras estritas de design corporativo:
+Os painéis desenvolvidos (seja em Streamlit ou Power BI) seguem regras estritas de design corporativo:
 *   **Eliminação de Chart Junk:** Sem grades desnecessárias, efeitos 3D ou excesso de cores.
 *   **Visualização Estruturada em Níveis:** Divisão clara entre dashboards *Operacionais* (Junior), *Táticos* (Pleno) e *Estratégicos* (Sênior) para atender a diferentes personas na corporação.
 *   **Cores de Contraste:** Uso de cores neutras (tons de cinza/azul corporativo) para contexto e a cor primária (neon) apenas no ponto de destaque do insight de negócios.
