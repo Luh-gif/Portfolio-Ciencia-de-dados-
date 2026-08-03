@@ -1,7 +1,7 @@
 # Relatório Executivo: Análise de Fluxo Financeiro e Gestão de Risco (Projeto PaySim)
 
 **Data:** 27 de Abril de 2026  
-**Responsável:** Consultoria de Dadoslucas - Cientista de Dados 
+**Responsável:** Consultoria de Dados  lucas - Cientista de Dados 
 **Escopo:** Diagnóstico de integridade, comportamento de uso e detecção de anomalias financeiras.
 
 ---
