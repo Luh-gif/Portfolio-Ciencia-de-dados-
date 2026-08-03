@@ -10,7 +10,7 @@
 
 Esta análise foi conduzida sobre o dataset público sintético PaySim, utilizado para simular comportamento transacional e padrões de fraude em ambiente de mobile money. Os valores apresentados refletem a escala do dataset simulado e servem como demonstração de metodologia analítica.
 
-Esta análise detalha a operação de um sistema financeiro processando mais de **6,3 milhões de transações**, totalizando um volume circulante bilionário. Identificamos que a operação está concentrada em dois produtos principais (**TRANSFER** e **CASH_OUT**), que juntos dominam **77% do volume financeiro**. Embora a operação seja robusta, detectamos um vazamento de capital por fraude na ordem de **R$ 12 bilhões**, concentrado exclusivamente nos canais de saída. A estratégia recomendada foca na blindagem desses canais e na otimização da infraestrutura para os picos de demanda identificados às 18:00h.
+Esta análise detalha a operação de um sistema financeiro processando mais de **6,3 milhões de transações**, totalizando um volume circulante bilionário. Identificamos que a operação está concentrada em dois produtos principais (**TRANSFER** e **CASH_OUT**), que juntos dominam **77% do volume financeiro**. Embora a operação seja robusta, do modelo simulado indica um vazamento de capital projetado na ordem de R$ 12 bilhões, concentrado exclusivamente nos canais de saída. A estratégia recomendada foca na blindagem desses canais e na otimização da infraestrutura para os picos de demanda identificados às 18:00h.
 
 ## 2. Principais Insights e Impacto Financeiro
 
