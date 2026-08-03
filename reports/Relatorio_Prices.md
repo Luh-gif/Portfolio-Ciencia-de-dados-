@@ -1,5 +1,8 @@
 # Relatório Executivo: Limpeza Avançada de Histórico de Preços
 
+**Responsável:** Consultoria de Dados  (Lucas - Cientista de Dados )
+
+
 ## Resumo Executivo
 Implementamos uma faxina algorítmica pesada na estrutura histórica da Inteligência de Pricing. Originalmente recebendo um fluxo de 371010 registros repletos de problemas que arruinariam nossa base de modelagem preditiva, focamos em higienizar as bases mantendo total integridade geoespacial. **O *Data Integrity Status* atestou retenção de 99.75% do pipeline.**
 
@@ -16,3 +19,7 @@ Implementamos uma faxina algorítmica pesada na estrutura histórica da Intelig�
 ## Próximos Passos Sugeridos (Acionabilidade para Consultoria)
 1. **Modelo Preditivo (Forecasting):** Agora rodar o baseline para o Prophet prever tendências do E10 usando a sazonalidade e preço.
 2. **Merge Geográfico de Postos:** Combinar a base final do `price_history_limpo.csv` com as amenidades do nosso passo anterior para medir o "*Preço Médio vs. Qualidade do Posto*". Postos com lava-rápido estão cobrando mais caro pra subsidiar infra? Nós entregaremos esta resposta logo menos.
+
+
+---
+*Lucas - Cientista de Dados *

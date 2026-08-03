@@ -1,5 +1,8 @@
 # Nota Técnica Estratégica: Arquitetura Moderna de Dados (AWS + Athena + QuickSight)
 
+**Responsável:** Consultoria de Dados  (Lucas - Cientista de Dados )
+
+
 ## Resumo Executivo
 A combinação de **AWS S3 + Athena + QuickSight** representa a mudança do paradigma de "Servidores de Banco de Dados" para o paradigma de **"Serverless Data Lake"**. Permite processar petabytes de dados, analisá-los com SQL padrão e gerar dashboards executivos sem a necessidade de gerenciar, escalar ou pagar por servidores ligados 24/7. 
 
@@ -44,4 +47,4 @@ O Athena é um serviço de consulta interativa que permite analisar dados direta
 - **Técnico:** Sempre prefira salvar os dados finais em formato `.parquet`. Isso torna o custo do Athena quase zero e a performance do QuickSight imbatível.
 
 ---
-**Elaborado por:** AntiGravity - Inteligência Estratégica em Dados.
+*Lucas - Cientista de Dados *

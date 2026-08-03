@@ -1,4 +1,7 @@
 # Relatório Executivo: Auditoria de Risco e Inteligência Anti-Sinistralidade
+
+**Responsável:** Consultoria de Dados  (Lucas - Cientista de Dados )
+
 **Projeto:** Vitrine 05 - Fábrica de Ciência de Dados (Nível Sênior)  
 **Status:** Finalizado para Apresentação  
 
@@ -62,5 +65,4 @@ Para garantir que o modelo não seja uma "caixa preta", utilizamos a técnica **
 2.  **Dashboard de Risco em Real-Time:** Integrar este motor com o Power BI para visão diária de sinistros.
 
 ---
-**AntiGravity - Inteligência Estratégica de Dados**  
-*Blindando o lucro através da ciência de dados.*
+*Lucas - Cientista de Dados *

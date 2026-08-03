@@ -1,5 +1,8 @@
 # Estratégia de Dashboards Web: Do Operacional ao Estratégico (ROI-Focused)
 
+**Responsável:** Consultoria de Dados  (Lucas - Cientista de Dados )
+
+
 Esqueça o Power BI. Se vamos construir no formato Web (usando Streamlit ou Frameworks Modernos), o dashboard precisa ser uma ferramenta de decisão, não apenas um quadro de fotos.
 
 Aqui está o que cada nível precisa contar para "uau" o cliente:
@@ -56,3 +59,6 @@ Como você é Cientista de Dados, recomendo usar o **Streamlit** para o portfól
 ---
 
 **Qual desses níveis você quer que eu te ajude a codar primeiro como exemplo para o seu novo projeto de BigQuery?**
+
+---
+*Lucas - Cientista de Dados *

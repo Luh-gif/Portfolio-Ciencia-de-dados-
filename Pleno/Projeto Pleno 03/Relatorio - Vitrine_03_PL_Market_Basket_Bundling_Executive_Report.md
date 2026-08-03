@@ -1,4 +1,7 @@
 # Relatório Executivo: Otimização de Mix e Estratégia de Bundling (Cesta Premium)
+
+**Responsável:** Consultoria de Dados  (Lucas - Cientista de Dados )
+
 **Projeto:** Vitrine 03 - Fábrica de Ciência de Dados (Nível Pleno)  
 **Status:** Finalizado para Apresentação  
 
@@ -59,5 +62,4 @@ Dados mostram que em períodos de alta do Beef (Carne), o Chicken (Frango) não 
 2.  **Modelo Preditivo de Demanda:** Unir dados climáticos com as vendas de frutas para otimizar o estoque e evitar desperdício (Shrinkage).
 
 ---
-**AntiGravity - Inteligência Estratégica de Dados**  
-*Transformando índices de consumo em estratégias de crescimento.*
+*Lucas - Cientista de Dados *

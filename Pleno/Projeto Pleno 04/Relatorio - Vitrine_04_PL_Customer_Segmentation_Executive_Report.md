@@ -1,4 +1,7 @@
 # Relatório Executivo: Segmentação Estratégica e Inteligência de Personas (B2C)
+
+**Responsável:** Consultoria de Dados  (Lucas - Cientista de Dados )
+
 **Projeto:** Vitrine 04 - Fábrica de Ciência de Dados (Nível Pleno)  
 **Status:** Finalizado para Apresentação  
 
@@ -60,5 +63,4 @@ Clientes com renda mensal alta, mas baixo gasto médio na loja. Ocupam muito tem
 2.  **A/B Testing:** Validar as recomendações táticas por cluster em um grupo de controle.
 
 ---
-**AntiGravity - Inteligência Estratégica de Dados**  
-*Segmentando comportamento, multiplicando resultados.*
+*Lucas - Cientista de Dados *

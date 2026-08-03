@@ -1,4 +1,7 @@
 # Relatório Executivo: Monitoramento de Pricing e Inteligência Macro-Econômica
+
+**Responsável:** Consultoria de Dados  (Lucas - Cientista de Dados )
+
 **Projeto:** Vitrine 02 - Fábrica de Ciência de Dados (Nível Júnior)  
 **Status:** Finalizado para Apresentação  
 
@@ -57,5 +60,4 @@ Os preços tendem a ser mais voláteis e competitivos em meio de semana (Terça/
 2.  **Machine Learning Preditivo:** Criar um modelo de previsão de preços competitivos para os próximos 7 dias.
 
 ---
-**AntiGravity - Inteligência Estratégica de Dados**  
-*Traduzindo Big Data em lucro real.*
+*Lucas - Cientista de Dados *

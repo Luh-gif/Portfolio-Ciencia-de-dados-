@@ -1,4 +1,7 @@
 # Relatório Executivo: Inteligência Preditiva de Malha e Otimização de EBITDA
+
+**Responsável:** Consultoria de Dados  (Lucas - Cientista de Dados )
+
 **Projeto:** Vitrine 06 - Fábrica de Ciência de Dados (Nível Sênior)  
 **Status:** Finalizado para Apresentação  
 
@@ -54,5 +57,4 @@ Para transformar dados em ações, implementamos um modelo de **Random Forest** 
 > Recomenda-se um Shadow Test de 30 dias para calibrar a precisão do score de atraso contra a realidade operacional e ajustar os limites de corte (thresholds) de decisão.
 
 ---
-**AntiGravity - Inteligência Estratégica de Dados**  
-*Ciência de dados sênior: prevenindo crises, maximizando o EBITDA.*
+*Lucas - Cientista de Dados *

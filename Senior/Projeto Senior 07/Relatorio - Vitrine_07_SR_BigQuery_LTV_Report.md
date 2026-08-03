@@ -2,7 +2,7 @@
 
 **Data:** 27 de Abril de 2026  
 **Status:** Em Desenvolvimento  
-**Responsável:** AntiGravity (Estrategista de Dados)
+**Responsável:** Consultoria de Dados  (Lucas - Cientista de Dados )
 
 ## Resumo Executivo
 Este projeto implementa uma solução de inteligência de dados em larga escala utilizando o **Google BigQuery** para prever o valor de vida útil (LTV) dos clientes do e-commerce *TheLook*. Através do uso de SQL Avançado e BigQuery ML, identificamos os segmentos de maior valor e clientes em risco de evasão, permitindo uma alocação de orçamento de marketing 20% mais eficiente.
@@ -26,3 +26,6 @@ Este projeto implementa uma solução de inteligência de dados em larga escala 
 - Finalização da extração de features via SQL (CTEs e Window Functions).
 - Treinamento do modelo `LINEAR_REG` no BigQuery ML.
 - Deploy da solução em dashboard estratégico.
+
+---
+*Lucas - Cientista de Dados *

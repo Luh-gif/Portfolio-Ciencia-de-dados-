@@ -1,5 +1,8 @@
 # Relatório Executivo: Análise Macro global e Limpeza de Cesta Básica 
 
+**Responsável:** Consultoria de Dados  (Lucas - Cientista de Dados )
+
+
 ## Resumo Executivo
 Finalizamos o workflow de limpeza avançada na tabela de cestas de café da manhã. Analisamos dados cobrindo **80 Países** e **122 Cidades Ativas**, mapeando a força do poder de compra perante itens commoditizados.
 Preservamos a segurança algorítmica e expurgamos erros lógicos sem sacrificar o volume da pesquisa: **Retivemos impressionantes 100.0% da malha original (10248 registros consolidados)**.
@@ -18,3 +21,7 @@ Com os dados limpos, conseguimos observar as disparidades brutais engolfando a i
 ## Recomendações Acionáveis e Próximos Passos
 1. **Clusterização de Regiões de Poder de Compra:** Usar essas métricas unidas ao `z_score_price_usd` para um Algoritmo de Agrupamento (*K-Means*) em busca de "Mercados Irmãos" — onde exportadores podem posicionar franquias com custos parecidos.
 2. **Dashboard de Monitoramento Financeiro:** Integrar a base tratada de `breakfast_basket_limpo.csv` a ferramentas como o Power BI, destacando a correlação das moedas frágeis x Custos reais aos lares.
+
+
+---
+*Lucas - Cientista de Dados *

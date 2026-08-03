@@ -1,4 +1,7 @@
 # Relatório Executivo: Sanitização e Enriquecimento de Dados Geológicos
+
+**Responsável:** Consultoria de Dados  (Lucas - Cientista de Dados )
+
 **Projeto:** Rogii Wellbore Geology Prediction (Senior 09)
 
 ## 1. Resumo Executivo
@@ -19,5 +22,4 @@ Com esta limpeza, reduzimos o risco de o modelo tomar decisões baseadas em "lix
 2.  **Redução de Custos de Treinamento:** O formato Parquet permite que iteremos modelos 5x mais rápido que usando CSVs brutos.
 
 ---
-**Status:** ✅ Pronto para Modelagem Preditiva.
-*Fábrica de Ciência de Dados - AntiGravity*
+*Lucas - Cientista de Dados *

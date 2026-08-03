@@ -1,5 +1,8 @@
 # Relatório Executivo: Limpeza Avançada de Dados (Postos de Combustível)
 
+**Responsável:** Consultoria de Dados  (Lucas - Cientista de Dados )
+
+
 ## Resumo Executivo
 O processo de Data Cleaning e Feature Engineering foi finalizado com foco em maximização de sinal e extração de metadados para inteligência competitiva e modelagem preditiva de alto valor agregado (ROI). Base passou de formatações não-estruturadas (JSONs puros) para flags estruturadas analisáveis.
 
@@ -22,3 +25,7 @@ Foram extraídos campos semânticos essenciais visando avaliar o grau de "comple
 ## Próximos Passos Sugeridos
 1. **Modelagem Geospacial Avançada (High ROI):** Usar a lat/long com as flags de amenidades obtidas para plotar zonas frias de infraestrutura premium na região. Indicar essas zonas como *Target de Expansão/Investimento*.
 2. **Clusterização K-Means de Unidades:** Segmentar postos 'Tier 1' (Múltiplos Combustíveis, 24h, Premium + Lavagem) usando as flags que criamos contra o pelotão 'Tier 3' (Baixa infra).
+
+
+---
+*Lucas - Cientista de Dados *

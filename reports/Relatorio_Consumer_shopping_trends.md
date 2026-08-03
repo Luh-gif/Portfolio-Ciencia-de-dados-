@@ -1,5 +1,8 @@
 # Relatório Executivo: Análise sobre Tendências de Consumo Varejo
 
+**Responsável:** Consultoria de Dados  (Lucas - Cientista de Dados )
+
+
 ## Resumo Executivo
 Os dados referentes ao cenário de **Tendências de Consumo Varejo** foram processados pela nossa esteira de Limpeza Avançada (com *Winsorization* de outliers e Normalização StandardScaler). Estabilizamos a base de 11789 registros válidos e 25 dimensões otimizadas, garantindo que algoritmos preditivos operem sem viés ou ruídos. A integridade desta base desbloqueia o modelo de análise para avaliação de propensão e perfil de compra (Basket Analysis).
 
@@ -20,3 +23,7 @@ Os dados referentes ao cenário de **Tendências de Consumo Varejo** foram proce
 ## Próximos Passos Sugeridos
 - [Prioridade Alta] Realizar a Segmentação (Clusterização) desses dados para entregar o "Retrato Ideal" do consumidor/evento para o projeto.
 - [Prioridade Média] Testar um modelo de *Tree* (RandomForest / Decision Tree) inicial cruzando as features contra a variável financeira para avaliar se a base está com alto poder explicativo para previsões de receita.
+
+
+---
+*Lucas - Cientista de Dados *

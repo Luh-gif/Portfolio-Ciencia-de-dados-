@@ -1,5 +1,8 @@
 # Relatório Estratégico: Análise de Fraude PaySim (SQL Sênior)
 
+**Responsável:** Consultoria de Dados  (Lucas - Cientista de Dados )
+
+
 ## 1. Resumo Executivo
 Esta análise foca na identificação de padrões de fraude e impacto financeiro utilizando consultas SQL avançadas. Processamos uma base de **6.3 milhões de transações**, onde identificamos que a fraude está severamente concentrada em tipos específicos de operação, custando milhões em perdas diretas que poderiam ser mitigadas com regras de bloqueio baseadas em dados.
 
@@ -69,4 +72,4 @@ LIMIT 10;
 3.  **Refinamento de Alertas:** Utilizar `isFlaggedFraud` para medir a eficiência atual do sistema e ajustar os limiares de detecção.
 
 ---
-**Análise desenvolvida por AntiGravity - Consultoria Sênior de Dados.**
+*Lucas - Cientista de Dados *

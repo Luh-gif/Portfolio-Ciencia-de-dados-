@@ -1,5 +1,8 @@
 # Relatório Executivo: Análise sobre Sales Data (Atacado/B2B)
 
+**Responsável:** Consultoria de Dados  (Lucas - Cientista de Dados )
+
+
 ## Resumo Executivo
 Os dados referentes ao cenário de **Sales Data (Atacado/B2B)** foram processados pela nossa esteira de Limpeza Avançada (com *Winsorization* de outliers e Normalização StandardScaler). Estabilizamos a base de N/A registros válidos e N/A dimensões otimizadas, garantindo que algoritmos preditivos operem sem viés ou ruídos. A integridade desta base desbloqueia o modelo de análise para forecast de faturamento comercial e eficiência de vendedor.
 
@@ -20,3 +23,7 @@ Os dados referentes ao cenário de **Sales Data (Atacado/B2B)** foram processado
 ## Próximos Passos Sugeridos
 - [Prioridade Alta] Realizar a Segmentação (Clusterização) desses dados para entregar o "Retrato Ideal" do consumidor/evento para o projeto.
 - [Prioridade Média] Testar um modelo de *Tree* (RandomForest / Decision Tree) inicial cruzando as features contra a variável financeira para avaliar se a base está com alto poder explicativo para previsões de receita.
+
+
+---
+*Lucas - Cientista de Dados *

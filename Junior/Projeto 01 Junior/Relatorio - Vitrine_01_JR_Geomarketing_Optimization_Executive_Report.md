@@ -1,4 +1,7 @@
 # Relatório Executivo: Inteligência de Geomarketing e Otimização de Rede
+
+**Responsável:** Consultoria de Dados  (Lucas - Cientista de Dados )
+
 **Projeto:** Vitrine 01 - Fábrica de Ciência de Dados (Nível Júnior)  
 **Status:** Finalizado para Apresentação  
 
@@ -59,5 +62,4 @@ Mapear postos temporariamente inativos em zonas urbanas densas.
 3.  **Dashboard em Tempo Real:** Conectar esta lógica a uma ferramenta de BI (Power BI/Looker) para monitoramento de novos entrantes.
 
 ---
-**AntiGravity - Inteligência Estratégica de Dados**  
-*Construindo decisões, não apenas gráficos.*
+*Lucas - Cientista de Dados *
