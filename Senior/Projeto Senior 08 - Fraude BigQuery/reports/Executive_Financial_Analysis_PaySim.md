@@ -1,7 +1,7 @@
 # Relatório Executivo: Análise de Fluxo Financeiro e Gestão de Risco (Projeto PaySim)
 
 **Data:** 27 de Abril de 2026  
-**Responsável:** Consultoria de Dados AntiGravity (lucas - Cientista de Dados Sênior)  
+**Responsável:** Consultoria de Dadoslucas - Cientista de Dados 
 **Escopo:** Diagnóstico de integridade, comportamento de uso e detecção de anomalias financeiras.
 
 ---
@@ -38,4 +38,4 @@ Esta análise detalha a operação de um sistema financeiro processando mais de 
 
 ---
 **Documento gerado para fins de decisão estratégica.**  
-*Luiz - Cientista de Dados Sênior*
+lucas - Cientista de Dados
