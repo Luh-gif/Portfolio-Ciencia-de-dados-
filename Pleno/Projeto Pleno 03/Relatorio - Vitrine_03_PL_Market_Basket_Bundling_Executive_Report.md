@@ -8,10 +8,13 @@
 ---
 
 ## 1. Resumo Executivo
+
+Esta análise foi conduzida sobre dados públicos agregados e simulados de preços internacionais de alimentos (baseados em índices globais de custo de vida, como o Numbeo), adaptados para modelagem de cesta de consumo (Market Basket Analysis). Os valores em moeda e as projeções financeiras refletem cenários teóricos de estudo de caso para demonstração metodológica.
+
 Neste case, analisamos a variabilidade e a correlação de preços da "Cesta de Café da Manhã" global para desenhar estratégias de **Revenue Management**. Diferente de uma análise puramente descritiva, aqui identificamos itens "âncora" e "complementares", propondo uma estrutura de combos (bundles) que visa aumentar o ticket médio através de gatilhos psicológicos de conveniência e descontos táticos.
 
 **Métricas Gerenciais:**
-*   **Ticket Médio Global (Cesta):** Variação de **R$ 8,00 a R$ 25,00** (USD equiv) entre regiões.
+*   **Ticket Médio Global (Cesta):** Variação de **US$ 8,00 a US$ 25,00** entre regiões (estudo de caso simulado).
 *   **Aderência ao Bundle:** Itens como Leite, Pão e Ovos apresentam correlação de demanda de **0.91**, validando o "Combo Essencial".
 *   **Alavanca de Margem:** Frutas e itens de Hortifruti (Maçãs/Laranjas) são as melhores alavancas para cross-sell com margem superior.
 
@@ -23,18 +26,18 @@ Neste case, analisamos a variabilidade e a correlação de preços da "Cesta de 
 ## 2. Principais Insights e Oportunidades (ROI)
 
 ### A. O Combo Essencial (High Flow, Low Margin)
-Identificamos que Milk, Bread e Eggs compõem o núcleo inelástico da cesta. O cliente raramente abandona a loja sem um deles se comprar o outro.
+Identificamos que Leite, Pão e Ovos compõem o núcleo inelástico da cesta. O cliente raramente abandona a loja sem um deles se comprar o outro.
 *   **Estratégia:** Criar o "Combo Desjejum Matinal" com preço fixed-price 3% menor que a soma individual.
-*   **ROI Projetado:** Aumento de **15% no volume de transações** da categoria devido à conveniência do pacote.
+*   **ROI Projetado (Simulação):** Aumento estimado de **15% no volume de transações** da categoria sob cenário de modelagem da conveniência do pacote.
 
 ### B. Upsell de Hortifruti (Elastic Item Strategy)
 Itens como Maçãs e Bananas possuem correlação moderada com os âncoras, mas alto potencial de margem.
 *   **Estratégia:** Oferecer 50% de desconto na segunda unidade de frutas quando o cliente adquire o "Combo Essencial".
-*   **ROI Projetado:** Aumento de **8% na margem bruta total da cesta**, diluindo o custo fixo de logística por item vendido.
+*   **ROI Projetado (Simulação):** Aumento estimado de **8% na margem bruta total da cesta** sob cenário simulado, diluindo o custo fixo de logística por item vendido.
 
 ### C. Arbitragem de Proteína (Cenário Inflacionário)
-Dados mostram que em períodos de alta do Beef (Carne), o Chicken (Frango) não acompanha na mesma proporção.
-*   **Oportunidade:** Promoções de "Substituição Direta" em combos pré-montados podem proteger o faturamento total da loja durante picos inflacionários sazonais.
+Dados mostram que em períodos de alta da Carne Bovina, o Frango não acompanha na mesma proporção.
+*   **Oportunidade:** Promoções de "Substituição Direta" em combos pré-montados podem proteger o faturamento total projetado da loja durante picos inflacionários sazonais.
 
 ---
 
