@@ -8,6 +8,9 @@
 ---
 
 ## 1. Resumo Executivo
+
+Esta análise foi conduzida sobre dados públicos simulados e agregados de postos de combustível no Reino Unido (UK Fuel Stations), utilizados para demonstrar metodologias de precificação (Pricing) e análise descritiva de dados em larga escala. As marcas citadas, os preços em pence e as projeções financeiras refletem estimativas e cenários hipotéticos de estudo de caso para validação de conceitos de negócio.
+
 Este projeto analisa o comportamento de pricing em larga escala (370k+ registros) da rede de varejo de combustíveis. Identificamos como fatores externos (dia da semana e competitividade regional) e internos (posicionamento de marca) impactam diretamente na margem bruta. Através de Big Data Viz, transformamos dados massivos em dashboards de decisão que isolam marcas premium de marcas "discount", permitindo ajustes táticos de preço em regiões de alta saturação competitiva.
 
 **Números Principais:**
@@ -24,15 +27,15 @@ Este projeto analisa o comportamento de pricing em larga escala (370k+ registros
 
 ### A. Prêmios de Marca e Segmentação de Valor
 Marcas como Shell e BP mantêm um prêmio de preço médio constante de **5 a 8 pence** acima da média do mercado, suportado por fidelidade e conveniência superior.
-*   **Impacto:** Para um posto de médio volume, manter esse prêmio pode representar um acréscimo de **R$ 45.000/mês** (equivalente) na margem, desde que o PCI (Índice de Competitividade) local permita.
+*   **Impacto Projetado:** Para um posto de médio volume, manter esse prêmio projeta um acréscimo de **£ 6.000/mês** (libras esterlinas) na margem sob condições ideais, desde que o PCI (Índice de Competitividade) local permita.
 
 ### B. Vulnerabilidade Regional (Índice PCI)
 Identificamos condados (counties) onde o PCI médio é agressivamente baixo, indicando uma "Guerra de Preços" crônica.
-*   **Impacto:** Operar nestas regiões sem uma estrutura de custos enxuta reduz o ROI em até **40%**. Recomendamos migrar o foco de volume para conveniência nestas praças.
+*   **Impacto Estimado:** Operar nestas regiões sem uma estrutura de custos enxuta projeta reduzir o ROI simulado em até **40%**. Recomendamos simular a migração do foco de volume para conveniência nestas praças.
 
 ### C. Janelas de Oportunidade em Dias Úteis
 Os preços tendem a ser mais voláteis e competitivos em meio de semana (Terça/Quarta), com uma estabilização de "preço prêmio" que inicia nas sextas-feiras.
-*   **Impacto:** Ajustes dinâmicos de preço antecipados na quinta-feira à noite podem capturar um aumento de margem de **2.5%** no fluxo de final de semana sem perda significativa de volume.
+*   **Impacto Estimado:** Ajustes dinâmicos de preço antecipados na quinta-feira à noite estimam capturar um aumento de margem de até **2,5%** no fluxo de final de semana sem perda significativa de volume em cenários de teste.
 
 ---
 
@@ -51,7 +54,7 @@ Os preços tendem a ser mais voláteis e competitivos em meio de semana (Terça/
 
 > [!IMPORTANT]
 > **Otimização de Ciclo Temporal**  
-> Automatizar o repasse de custos para as bombas em janelas de 12h para acompanhar a volatilidade detectada. Reduzir o lag de resposta em 24h pode salvar até **R$ 12.000/posto/ano** em margem perdida.
+> Automatizar o repasse de custos para as bombas em janelas de 12h para acompanhar a volatilidade detectada. Reduzir o lag de resposta em 24h projeta uma economia estimada de até **£ 1.600/posto/ano** (libras esterlinas) em margens que seriam perdidas (cenário simulado).
 
 ---
 
