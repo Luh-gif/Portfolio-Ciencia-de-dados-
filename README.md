@@ -1,4 +1,4 @@
-# 🚀 Portfólio de Ciência de Dados: Projetos Técnicos
+#  Portfólio de Ciência de Dados: Projetos Técnicos
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)
 ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-orange?style=for-the-badge&logo=scikit-learn&logoColor=white)
