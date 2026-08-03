@@ -8,13 +8,16 @@
 ---
 
 ## 1. Resumo Executivo
+
+Esta análise foi conduzida sobre o dataset público "Medical Cost Personal Dataset" (disponível no Kaggle), que contém dados demográficos e custos de seguro de saúde individuais. Os dados originais foram adaptados para simular um cenário de auditoria de sinistralidade e compliance de faturamento em uma rede hospitalar. Todas as estimativas de recuperação e economias refletem projeções teóricas simuladas baseadas neste estudo de caso.
+
 Neste case de alta complexidade, implementamos um motor de **Compliance Inteligente (Anti-Fraud/Risk)** para auditar cobranças e reduzir a sinistralidade de uma rede hospitalar. Utilizando o algoritmo **Isolation Forest**, isolamos as "Anomalias de Faturamento" que representam cobranças desproporcionais ao perfil clínico do paciente. Esta abordagem não apenas protege o EBITDA do grupo, mas também endereça ineficiências operacionais que impactam no LTV (Lifetime Value) e na confiança dos stakeholders.
 
 **Principais Números:**
 *   **Base Auditada:** 1.338 registros de faturamento.
 *   **Anomalias Detectadas:** 67 registros (5% do total).
-*   **Exposição Financeira (Risco):** **R$ 2.465.628,76** (USD equiv) sob suspeita de desalinhamento de custo/benefício.
-*   **ROI de Auditoria:** Redução potencial de **12% nas perdas operacionais** via revisão retrospectiva.
+*   **Exposição Financeira (Risco):** **R$ 2.465.628,76** sob suspeita de desalinhamento de custo/benefício (projeção baseada em valores originais simulados).
+*   **ROI de Auditoria:** Redução estimada de **12% nas perdas operacionais** (cenário simulado) via revisão retrospectiva.
 
 ---
 
@@ -23,16 +26,16 @@ Neste case de alta complexidade, implementamos um motor de **Compliance Intelige
 ### A. Concentração Crítica de Risco
 Identificamos que as anomalias não são aleatórias: **85% das cobranças auditáveis** estão concentradas em pacientes Fumantes com IMC > 30.
 *   **Ação Recomendada:** Revisão da "Política de Subscrição" e implementação de convênios preventivos para grupos de alto risco.
-*   **Impacto:** Redução direta de **R$ 450k/ano** em claims evitáveis através de medicina preventiva.
+*   **Impacto Estimado:** Redução direta projetada de **R$ 450k/ano** (cenário simulado) em claims evitáveis através de medicina preventiva.
 
 ### B. Desvio de Faturamento (Over-Pricing Detectado)
 O motor detectou cobranças até **3x superiores** à mediana para perfis similares em regiões específicas (ex: Southeast).
 *   **Ação Recomendada:** Auditoria técnica dos prestadores nestas regiões para verificar se houve inflação artificial de itens hospitalares ou procedimentos desnecessários.
-*   **Impacto:** Recuperação de até **R$ 380k** em glosas técnicas justificadas estatisticamente.
+*   **Impacto Estimado:** Recuperação projetada de até **R$ 380k** (cenário simulado) em glosas técnicas justificadas estatisticamente.
 
 ### C. Eficiência do Time de Compliance
 Atualmente, a auditoria é manual e aleatória. O modelo permite focar o esforço humano onde a probabilidade de erro é **22x maior** que na base regular.
-*   **Oportunidade:** Redução de **40% no custo fixo do time de auditoria** mantendo a mesma detecção de valor financeiro.
+*   **Oportunidade:** Redução projetada de **40% no custo fixo do time de auditoria** (cenário simulado) mantendo a mesma detecção de valor financeiro.
 
 ---
 
@@ -40,7 +43,7 @@ Atualmente, a auditoria é manual e aleatória. O modelo permite focar o esforç
 
 Para garantir que o modelo não seja uma "caixa preta", utilizamos a técnica **SHAP (SHapley Additive exPlanations)**. Abaixo, isolamos os fatores que mais contribuem para uma cobrança ser sinalizada como anomalia:
 
-![Drivers de Anomalia - SHAP Summary](file:///c:/Users/luizn/OneDrive/Área%20de%20Trabalho/Projetos%20Ciencia%20de%20dados/reports/figures/hospital_audit/shap_summary_audit.png)
+![Drivers de Anomalia - SHAP Summary](../../reports/figures/hospital_audit/shap_summary_audit.png)
 
 1.  **Charges (Valor da Conta):** O driver primário. Contas fora da curva de densidade populacional são os primeiros alvos.
 2.  **BMI (IMC):** Pacientes com alto IMC apresentam contribuição positiva marginal para o score de anomalia quando cruzado com custos regionais.
