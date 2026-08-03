@@ -8,6 +8,9 @@
 ---
 
 ## 1. Resumo Executivo
+
+Esta análise foi conduzida sobre dados públicos simulados e agregados de postos de combustível no Reino Unido (UK Fuel Stations), utilizados para demonstrar metodologias de análise descritiva e espacial (Geomarketing). As projeções financeiras, as oportunidades de M&A e os benchmarks de marcas refletem estimativas e cenários hipotéticos de estudo de caso para validação de conceitos de negócio.
+
 Este projeto realizou uma auditoria completa na infraestrutura de rede de postos de combustível no Reino Unido (base de postos UK), utilizando técnicas de análise descritiva e espacial para identificar falhas de cobertura e oportunidades de expansão. Detectamos uma concentração de mercado onde as top 3 marcas dominam mais de 40% dos pontos, mas falham em oferecer infraestrutura crítica de transição energética (carregamento EV). A otimização desta rede pode representar um ganho de market share em nichos de conveniência e serviços residenciais de alto tráfego.
 
 **Números Principais:**
@@ -24,22 +27,22 @@ Este projeto realizou uma auditoria completa na infraestrutura de rede de postos
 
 ### A. O Gap do "Oceano Azul" em Carregamento EV
 Apenas uma fração mínima da rede está preparada para a frota de veículos elétricos. Cidades de alto poder aquisitivo apresentam disponibilidade de carregamento inferior a 20%.
-*   **Impacto:** Estima-se que postos que implementam carregadores EV aumentam o LTV (Lifetime Value) do cliente em **18% a 25%** devido ao maior tempo de permanência na conveniência enquanto o carro carrega.
+*   **Impacto Projetado:** Sob premissas de estudo de caso, a implementação de carregadores EV estima-se que aumente o LTV (Lifetime Value) do cliente em **18% a 25%** devido ao maior tempo de permanência projetado na conveniência.
 
 ### B. Concentração de Pareto e Poder de Marca
 O mercado é altamente concentrado (Shell e Esso). No entanto, marcas menores (independentes) dominam as áreas rurais onde a fidelidade é maior e a guerra de preços é menos agressiva.
-*   **Impacto:** A aquisição de redes independentes em "deserts of service" pode proteger margens de lucro em até **12%** em comparação com a abertura de novos postos (Greenfield).
+*   **Impacto Estimado:** Em simulações operacionais, a aquisição de redes independentes em "deserts of service" projeta uma proteção de margem de lucro de até **12%** se comparada à abertura de novos postos (Greenfield).
 
 ### C. Alvos de Aquisição (Postos Fechados/M&A)
 Mapear postos temporariamente inativos em zonas urbanas densas. 
-*   **Impacto:** Adquirir ativos inativos reduz o tempo de licenciamento (Permitting) em até **18 meses**, acelerando o fluxo de caixa positivo.
+*   **Impacto Estimado:** A reativação de ativos inativos projeta reduzir o tempo médio de licenciamento (Permitting) em até **18 meses**, acelerando a curva de geração de caixa.
 
 ---
 
 ## 3. Top Drivers da Performance Regional
 1.  **Conveniência 24h:** O maior driver de ticket médio em postos urbanos.
 2.  **Mix de Serviços:** Postos com banheiros e lava-rápido retêm **3x mais clientes** recorrentes do que postos de bandeira branca sem serviços.
-3.  **Proximidade com Rodovias (Motorways):** Sensibilidade a preço menor, permitindo margens de combustível superiores em até **R$ 0,15/litro** (equivalente).
+3.  **Proximidade com Rodovias (Motorways):** Sensibilidade a preço menor, permitindo margens de combustível superiores estimadas em até **£ 0,15/litro** (libras esterlinas) na precificação local.
 
 ---
 
@@ -48,11 +51,11 @@ Mapear postos temporariamente inativos em zonas urbanas densas.
 > [!TIP]
 > **Prioridade 01: Retrofit de EV Charging**  
 > Investir na instalação de carregadores rápidos em 30% da rede atual nas regiões identificadas como "Gaps" no notebook.  
-> **ROI Projetado:** Payback em 24 meses via aumento de vendas na loja de conveniência.
+> **ROI Projetado:** Payback em 24 meses via aumento de vendas na loja de conveniência (cenário simulado).
 
 > [!IMPORTANT]
-> **Estratégia M&A de Curto Prazo**  
-> Iniciar due diligence nos postos inativos das top 5 cidades identificadas. A aquisição destes ativos pode ser feita com um desconto de ativos (Distressed Assets) de até **30% sobre o valor de mercado**.
+> **Estrategia M&A de Curto Prazo**  
+> Iniciar due diligence nos postos inativos das top 5 cidades identificadas. Estima-se que a aquisição destes ativos sob premissas de mercado secundário possa ser simulada com um desconto de ativos (Distressed Assets) de até **30% sobre o valor de mercado**.
 
 ---
 
