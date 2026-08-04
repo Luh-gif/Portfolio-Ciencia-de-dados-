@@ -24,8 +24,8 @@ data/raw/
 # Ignorar dados processados pesados (>10MB)
 data/processed/price_history_limpo.csv
 
-# Ignorar dados do projeto 09 (Kaggle dataset de 2.6GB)
-Senior/Projeto Senior 09 - Geology Prediction/data/
+# Ignorar dados do projeto 09 (Kaggle dataset de 2.6GB) e a pasta inteira local
+Senior/Projeto Senior 09 - Geology Prediction/
 
 # Models (opcional, mas bom manter se leves)
 # models/*.joblib
