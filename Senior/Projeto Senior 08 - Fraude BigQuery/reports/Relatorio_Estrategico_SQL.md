@@ -4,13 +4,15 @@
 
 
 ## 1. Resumo Executivo
+Esta análise foi conduzida sobre o dataset público sintético PaySim, utilizado para simular comportamento transacional e padrões de fraude em ambiente de mobile money. Os valores apresentados refletem a escala do dataset simulado e servem como demonstração de metodologia analítica. Para o contexto completo de negócios e impacto executivo, consulte o [Relatório Executivo Financeiro](Executive_Financial_Analysis_PaySim.md).
+
 Esta análise foca na identificação de padrões de fraude e impacto financeiro utilizando consultas SQL avançadas. Processamos uma base de **6.3 milhões de transações**, onde identificamos que a fraude está severamente concentrada em tipos específicos de operação, custando milhões em perdas diretas que poderiam ser mitigadas com regras de bloqueio baseadas em dados.
 
 ## 2. Principais Insights (Impacto Financeiro)
 
 ### A. Concentração Crítica de Fraude
 A fraude não ocorre de forma uniforme. Identificamos que **100% das fraudes** ocorrem em apenas dois tipos de transação: `TRANSFER` e `CASH_OUT`.
-*   **Impacto:** Perda total de aproximadamente **$12 Bilhões** (valor simulado na base).
+*   **Impacto:** Perda total de aproximadamente **R$ 12 Bilhões** (valor simulado na base).
 *   **Risco:** Transações do tipo `TRANSFER` têm uma taxa de fraude significativamente maior que a média da base.
 ![Fraude por Canais](images/fraude_canais.png)
 ![Market Share por Canal](images/market_share.png)
@@ -62,7 +64,7 @@ LIMIT 10;
 ## 4. Recomendações Acionáveis (ROI)
 
 1.  **Bloqueio Preditivo em Tempo Real:** Implementar uma regra SQL/Engine de decisão que sinalize para revisão manual qualquer `TRANSFER` onde o valor da transação seja > 95% do saldo da conta de origem.
-    *   **ROI Projetado:** Redução de até **40% nas perdas por fraude** no primeiro mês.
+    *   **ROI Projetado:** Redução de até **40% nas perdas por fraude (cenário simulado)** no primeiro mês.
 2.  **Monitoramento de Contas Destino:** Criar uma "Blacklist" dinâmica de `nameDest` que receberam transações fraudulentas confirmadas, bloqueando novos recebimentos nestas contas.
     *   **Impacto:** Proteção de receita ao interromper o fluxo de saída do capital fraudado.
 
