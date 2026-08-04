@@ -23,7 +23,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# --- GERADOR DE DADOS SIMULADOS (Substituir por BigQuery futuramente) ---
+# --- MOCK DA CAMADA DE DADOS (Simula retorno de queries do BigQuery para deploy público) ---
 def get_data():
     channels = ['Google Ads', 'Facebook Ads', 'Organic Search', 'Email Marketing', 'Referral']
     data = {
