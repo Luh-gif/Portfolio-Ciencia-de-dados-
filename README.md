@@ -1,5 +1,7 @@
 #  Portfólio de Ciência de Dados: Projetos Técnicos
 
+🌐 **Language / Idioma:** [English Version 🇺🇸](https://github.com/Luh-gif/Data-Science-Portfolio) | Português 🇧🇷
+
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)
 ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-orange?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![Google BigQuery](https://img.shields.io/badge/Google%20BigQuery-SQL%20%26%20ML-blue?style=for-the-badge&logo=google-cloud&logoColor=white)
@@ -15,6 +17,15 @@
 >   * **R$ 4,8M (US$ 960k):** Receita anual projetada e protegida sob cenário simulado de malha aérea através do modelo de mitigação preditiva de atrasos severos (*Aviation Ops Risk*).
 >   * **R$ 2,4M:** Economia estimada em simulação de glosas de faturamento e erros de lançamento médico identificados por IA de detecção de anomalias (*Hospital Risk Audit*).
 
+```mermaid
+graph TD
+    A["Ecossistema de Dados: Impacto Projetado R$ 7.2M+ (Cenário Simulado)"] --> B["Mitigação Estimada de Riscos Logísticos R$ 4.8M"]
+    A --> C["Blindagem Estimada de Faturamento na Saúde R$ 2.4M"]
+    B --> B1[Previsão de Atrasos com Random Forest]
+    B --> B2[Explicabilidade das Causas via SHAP]
+    C --> C1[Detecção de Glosas/Duplicidades por IA]
+    C --> C2[Auditoria Automatizada via Isolation Forest]
+```
 
 ---
 
