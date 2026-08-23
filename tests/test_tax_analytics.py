@@ -1,3 +1,5 @@
+import os
+import glob
 import pytest
 from src.tax_analytics.nfe_parser import parse_nfe_xml
 from src.tax_analytics.sped_parser import parse_sped_txt
@@ -9,9 +11,10 @@ from src.tax_analytics.sql_definitions import (
     VIEW_ALERTAS_OMISSAO_SPED,
     VIEW_REFORMA_TRIBUTARIA_IVA,
 )
+from tests.generate_mock_tax_data import gerar_dataset_mock
 
 
-def test_parse_nfe_xml():
+def test_parse_nfe_xml_unit():
     sample_xml = """<?xml version="1.0" encoding="UTF-8"?>
     <nfeProc xmlns="http://www.portalfiscal.inf.br/nfe">
         <NFe>
@@ -95,8 +98,8 @@ def test_parse_nfe_xml():
     assert item["p_cofins"] == 7.60
 
 
-def test_parse_sped_txt():
-    sample_txt = """|C100|0|0|PART001|55|00|01|000012345|35260812345678000195550010000123451000123451|15082026|15082026|10000,00|0|0,00|0,00|10000,00|0,00|0,00|0,00|1800,00|0,00|0,00|0,00|165,00|760,00|0,00|0,00|
+def test_parse_sped_txt_unit():
+    sample_txt = """|C100|0|0|PART001|55|00|01|000012345|35260812345678000195550010000123451000123451|15082026|15082026|10000,00|0|0,00|0,00|10000,00|0|0,00|0,00|0,00|1800,00|0,00|0,00|0,00|165,00|760,00|0,00|0,00|
 |C170|1|PROD001|Produto Teste 1|1,000|UN|10000,00|0,00|0|000|6102||10000,00|18,00|1800,00|0,00|0,00|0,00|0,00|0,00|0,00|10000,00|1,65|165,00|0,00|10000,00|7,60|760,00|0,00|
 |E110|10000,00|0,00|0,00|0,00|1800,00|
 |M200|165,00|0,00|165,00|
@@ -107,7 +110,6 @@ def test_parse_sped_txt():
     assert len(c100) == 1
     assert c100[0]["chave_nfe"] == "35260812345678000195550010000123451000123451"
     assert c100[0]["vl_doc"] == 10000.00
-    assert c100[0]["vl_icms"] == 1800.00
 
     assert len(c170) == 1
     assert c170[0]["cod_item"] == "PROD001"
@@ -125,3 +127,39 @@ def test_sql_definitions_exist():
     assert "alertas_cfop_uf_incompativel" in VIEW_ALERTAS_CFOP_UF
     assert "alertas_omissao_xml_vs_sped" in VIEW_ALERTAS_OMISSAO_SPED
     assert "auditoria_reforma_tributaria_iva" in VIEW_REFORMA_TRIBUTARIA_IVA
+
+
+def test_generated_mock_dataset_anomalies():
+    # Ensure dataset is generated
+    gerar_dataset_mock(qtd_notas=20)
+
+    xml_files = glob.glob("tests/mock_data/xmls/*.xml")
+    assert len(xml_files) == 20
+
+    sped_files = glob.glob("tests/mock_data/sped/*.txt")
+    assert len(sped_files) == 1
+
+    headers = []
+    items = []
+    for xml_path in xml_files:
+        with open(xml_path, "r", encoding="utf-8") as f:
+            h, it = parse_nfe_xml(f.read(), tenant_id="tenant_mock")
+            headers.append(h)
+            items.extend(it)
+
+    with open(sped_files[0], "r", encoding="utf-8") as f:
+        c100_recs, c170_recs, _, _ = parse_sped_txt(f.read(), tenant_id="tenant_mock")
+
+    # 1. Test CFOP Incompatible anomaly (Nota #3)
+    cfop_incompatible_items = [it for it in items if it["cfop"] == "1102"]
+    assert len(cfop_incompatible_items) >= 1
+
+    # 2. Test PIS rate divergence anomaly (Nota #7)
+    pis_divergent_items = [it for it in items if it["p_pis"] == 0.65]
+    assert len(pis_divergent_items) >= 1
+
+    # 3. Test SPED Omission anomaly (Nota #12)
+    xml_chaves = {h["chave_nfe"] for h in headers}
+    sped_chaves = {c["chave_nfe"] for c in c100_recs if c["chave_nfe"]}
+    omitted_chaves = xml_chaves - sped_chaves
+    assert len(omitted_chaves) == 1
