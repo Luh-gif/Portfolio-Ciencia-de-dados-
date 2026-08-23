@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<nfeProc xmlns="http://www.portalfiscal.inf.br/nfe" versao="4.00">
+  <NFe>
+    <infNFe Id="NFe35260812345678000195550010000000011999999991" versao="4.00">
+      <ide>
+        <cUF>35</cUF>
+        <nNF>1</nNF>
+        <dhEmi>2026-08-01T02:00:00-03:00</dhEmi>
+      </ide>
+      <emit>
+        <CNPJ>12345678000195</CNPJ>
+        <UF>SP</UF>
+      </emit>
+      <dest>
+        <CNPJ>45678912000133</CNPJ>
+        <UF>RJ</UF>
+      </dest>
+      <det nItem="1">
+        <prod>
+          <cProd>PROD-001</cProd>
+          <xProd>Módulo Eletrônico Industrial</xProd>
+          <NCM>85371090</NCM>
+          <CFOP>6102</CFOP>
+          <vProd>1000.00</vProd>
+        </prod>
+        <imposto>
+          <PIS>
+            <PISAliq>
+              <vBC>1000.00</vBC>
+              <pPIS>1.65</pPIS>
+              <vPIS>16.50</vPIS>
+            </PISAliq>
+          </PIS>
+          <COFINS>
+            <COFINSAliq>
+              <vBC>1000.00</vBC>
+              <pCOFINS>7.60</pCOFINS>
+              <vCOFINS>76.00</vCOFINS>
+            </COFINSAliq>
+          </COFINS>
+        </imposto>
+      </det>
+    </infNFe>
+  </NFe>
+</nfeProc>

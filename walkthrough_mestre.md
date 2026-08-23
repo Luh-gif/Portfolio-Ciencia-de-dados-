@@ -20,6 +20,7 @@ graph TD
 
 1. **Eficiência Logística (R$ 4,8M/ano de impacto simulado protegido):** Modelo preditivo de classificação baseado em *Random Forest* que detecta a probabilidade de falhas e atrasos críticos na malha de transportes (*Aviation Ops Risk*), permitindo simular a reacomodação preditiva antes que multas e quebras de SLA ocorram (prospecção teórica de economia anual).
 2. **Prevenção de Glosas e Perdas Médicas (R$ 2,4M/ano de impacto simulado recuperado):** Algoritmo não-supervisionado *Isolation Forest* (*Hospital Risk Audit*) aplicado ao faturamento hospitalar, identificando lançamentos duplicados, inconsistências e padrões anômalos de consumo de exames, otimizando o OPEX projetado da auditoria manual.
+3. **Auditoria Fiscal & Tax Analytics BigQuery Engine:** Ingestão de centenas de milhares de arquivos NFe (XML) e SPED (TXT) com views SQL otimizadas no Google BigQuery para cruzamento de tributos (PIS/COFINS, CFOP x UF, Omissões XML x SPED e adequação à Reforma Tributária IVA Dual - CBS/IBS).
 
 ---
 
@@ -28,7 +29,8 @@ graph TD
 A arquitetura do projeto foi estruturada para ser parametrizada e modular, visando a escalabilidade do modelo PJ (permitindo reaproveitar até 70% da lógica para novos clientes):
 
 *   **`/data` (Ingestão & Camadas):** Separação estrita entre `raw/` (dados brutos protegidos e imutáveis) e `processed/` (dados higienizados e scorados prontos para visualização).
-*   **`/src` (Core Engine):** Toda a lógica operacional é empacotada em módulos Python reutilizáveis, evitando *spaghetti code* em notebooks.
+*   **`/src` (Core Engine):** Toda a lógica operacional é empacotada em módulos Python reutilizáveis (ex: `/src/tax_analytics/` para parsing e regras fiscais), evitando *spaghetti code* em notebooks.
+*   **`/docs` (Arquitetura & Especificações):** Documentação profunda detalhando esquemas de dados, DDLs BigQuery, governança multi-tenant e workflows operacionais (ver `docs/ARQUITETURA_TAX_ANALYTICS_BIGQUERY.md`).
 *   **`/tests` (Qualidade de Software):** Implementação de testes unitários automatizados para garantir a estabilidade do pipeline em produção.
 *   **`/.github` (CI/CD):** Pipeline de Integração Contínua configurado para rodar a esteira de testes a cada alteração de código.
 
@@ -37,7 +39,7 @@ A arquitetura do projeto foi estruturada para ser parametrizada e modular, visan
 ## ⚡ 3. Stack Tecnológico & Decisões Arquiteturais (O "Porquê")
 
 ### A. Processamento Local vs. Nuvem (Cloud MPP)
-*   **Decisão:** Em bases menores (varejo e consumo), o processamento ocorre via **Pandas** local. Para dados volumosos e transações financeiras (*Financial Fraud Analytics*), a computação ocorre de forma distribuída diretamente no **Google BigQuery** usando SQL avançado (CTEs e partições).
+*   **Decisão:** Em bases menores (varejo e consumo), o processamento ocorre via **Pandas** local. Para dados volumosos, transações financeiras e documentos fiscais (*Financial Fraud Analytics* e *Tax Analytics BigQuery Engine*), a computação ocorre de forma distribuída diretamente no **Google BigQuery** usando SQL avançado (CTEs e partições).
 *   **Justificativa:** Redução drástica de latência de rede e eliminação de custos fixos com servidores ligados 24/7 (Serverless Data Warehouse).
 
 ### B. Machine Learning Nativo em Data Warehouse (BQML)
@@ -54,7 +56,7 @@ A arquitetura do projeto foi estruturada para ser parametrizada e modular, visan
 
 Para garantir a robustez do código, implementamos um pipeline de **Integração Contínua (CI/CD)**:
 
-1. **Testes Unitários (`pytest`):** Criamos a pasta `/tests/` contendo scripts que validam a consistência dos pipelines operacionais (como o de tráfego do site em [test_pipeline_site.py](file:///c:/Users/luizn/OneDrive/%C3%81rea%20de%20Trabalho/Projetos%20Ciencia%20de%20dados/tests/test_pipeline_site.py)). Ele simula a entrada de dados brutos e valida se a saída processada e as colunas de cenários financeiros foram geradas com sucesso.
+1. **Testes Unitários (`pytest`):** Criamos a pasta `/tests/` contendo scripts que validam a consistência dos pipelines operacionais e parsers (como `tests/test_tax_analytics.py`).
 2. **GitHub Actions (`ci.yml`):** A cada `git push` ou `Pull Request` enviado para a branch `main`, uma máquina virtual Linux é provisionada na nuvem do GitHub, instala as dependências listadas no `requirements.txt` e executa a suíte de testes do repositório.
 
 ---
@@ -63,5 +65,5 @@ Para garantir a robustez do código, implementamos um pipeline de **Integração
 
 Os painéis desenvolvidos (seja em Streamlit ou Power BI) seguem regras estritas de design corporativo:
 *   **Eliminação de Chart Junk:** Sem grades desnecessárias, efeitos 3D ou excesso de cores.
-*   **Visualização Estruturada em Níveis:** Divisão clara entre dashboards *Operacionais* (Junior), *Táticos* (Pleno) e *Estratégicos* (Sênior) para atender a diferentes personas na corporação.
+*   **Visualização Estruturada em Níveis:** Divisão clara entre dashboards *Operacionais* (Junior), *Táticos* (Pleno), *Estratégicos* (Sênior) e *Auditoria Fiscal* (Tax Analytics) para atender a diferentes personas na corporação.
 *   **Cores de Contraste:** Uso de cores neutras (tons de cinza/azul corporativo) para contexto e a cor primária (neon) apenas no ponto de destaque do insight de negócios.

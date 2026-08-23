@@ -34,11 +34,12 @@ Clique nos links abaixo para explorar os projetos por nível de senioridade, com
 
 | Nível | Projeto | Foco Técnico | Metodologia & ROI de Negócio | Documentação |
 | :--- | :--- | :--- | :--- | :--- |
+| **Sênior** | [Tax Analytics & BigQuery Engine](docs/ARQUITETURA_TAX_ANALYTICS_BIGQUERY.md) | Cloud Data Warehouse (BigQuery) & SQL | Cruzamento NFe x SPED, regras PIS/COFINS, CFOP x UF, Reforma Tributária (IVA Dual) e governança RLS. | [Architecture Doc](docs/ARQUITETURA_TAX_ANALYTICS_BIGQUERY.md) |
 | **Sênior** | [Financial Fraud Analytics](Senior/Projeto%20Senior%2008%20-%20Fraude%20BigQuery/) | Cloud MPP (BigQuery) & SQL | Otimização de queries distribuídas para redução de custos (OPEX) em Data Lake corporativo. | [Case Study](Senior/Projeto%20Senior%2008%20-%20Fraude%20BigQuery/README.md) |
 | **Sênior** | [BigQuery LTV Prediction](Senior/Projeto%20Senior%2007/) | BQML & SQL Avançado (Cohort/RFV) | Modelagem de regressão linear nativa em Data Warehouse para previsão de receita futura por cohort de clientes. | [Case Study](Senior/Projeto%20Senior%2007/walkthrough.md) |
 | **Sênior** | [Aviation Ops Risk](Senior/Projeto%20Senior%2006/) | Random Forest & SHAP (XAI) | Mitigação de **US$ 1,5M+** em riscos operacionais de malha aérea com IA explicável. | [Case Study](Senior/Projeto%20Senior%2006/walkthrough.md) |
 | **Sênior** | [Hospital Risk Audit](Senior/Projeto%20Senior%2005/) | Isolation Forest (Outliers) | Identificação automatizada de **R$ 2,4M** em anomalias de faturamento de exames e contas médicas. | [Case Study](Senior/Projeto%20Senior%2005/walkthrough.md) |
-| **Pleno** | [Customer Segmentation](Pleno/Projeto%20Pleno%2004/) | K-Means Clustering | Segmentação comportamental RFV para otimização de custos de aquisição e retenção em campanhas de marketing. | [Case Study](Pleno/Projeto%20Pleno%2004/walkthrough.md) |
+| **Pleno** | [Customer Segmentation](Pleno/Projeto%20Pleno%2004/) | K-Means Clustering | Segmentação comportamental RFV para otimização de custos de aquisição e retenção em campanhas de marketing. | [Case Study](Pleno/Projeto%20Pleno%2003/walkthrough.md) |
 | **Pleno** | [Market Basket Analysis](Pleno/Projeto%20Pleno%2003/) | Association Rules & Bundling | Algoritmo Apriori aplicado em transações para otimização de ticket médio através de combos (product bundling). | [Case Study](Pleno/Projeto%20Pleno%2003/walkthrough.md) |
 | **Junior** | [Pricing Intelligence](Junior/Projeto%2002%20Junior/) | Big Data Viz & PCI Index | Cálculo do Price Competitiveness Index (PCI) sobre 370k+ registros diários de preços concorrenciais. | [Case Study](Junior/Projeto%2002%20Junior/walkthrough.md) |
 | **Junior** | [Geomarketing Expansion](Junior/Projeto%2001%20Junior/) | Geospatial Density Analytics | Mapeamento de densidade de infraestrutura de carregamento elétrico no UK para otimização de CAPEX de expansão. | [Case Study](Junior/Projeto%2001%20Junior/walkthrough.md) |
@@ -51,6 +52,7 @@ Clique nos links abaixo para explorar os projetos por nível de senioridade, com
 ## 🏗️ Arquitetura de Projetos (Modularidade)
 O projeto segue uma estrutura profissional voltada para escalabilidade e produção:
 - `/data/processed`: Bases limpas e scoradas prontas para consumo.
+- `/src/tax_analytics`: Engine de Ingestão e Auditoria Fiscal (Parsers NFe/SPED & SQL Definitions).
 - `/src/ml`: Motor de Machine Learning (`model_engine.py`).
 - `/src/reporting`: Módulo de visualizações corporativas (`viz_factory.py`).
 - `/models`: Modelos treinados e persistidos em `.joblib`.
